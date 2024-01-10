@@ -1,4 +1,6 @@
-export default function OneCustomerInfoEdit({ customer_id, customer_name, age, gender }) {
+export default function OneCustomerInfoEdit({ 
+    customer_id, customer_name, age, gender 
+}) {
     return (
         <>
             <div className="m-4 card bordered bg-blue-200 duration-200 hover:border-r-red">

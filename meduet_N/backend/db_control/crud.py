@@ -47,9 +47,12 @@ def myselect(mymodel, customer_id):
                 "customer_id": customer_info.customer_id,
                 "customer_name": customer_info.customer_name,
                 "age": customer_info.age,
+                "birth": customer_info.birth,
                 "gender": customer_info.gender,
                 "pregnant": customer_info.pregnant,
                 "allergy": customer_info.allergy,
+                "chronic": customer_info.chronic,
+                "medication": customer_info.medication,
                 "prefecture": customer_info.prefecture,
                 "height": customer_info.height,
                 "weight": customer_info.weight
@@ -108,12 +111,17 @@ def myselect3(mymodel, customer_id):
         result_dict_list = []
         for customer_info in result:
             result_dict_list.append({
+                "symptom_customer_id": customer_info.symptom_customer_id,
+                "symptom_id": customer_info.symptom_id,
                 "customer_id": customer_info.customer_id,
                 "symptom": customer_info.symptom,
-                "symptom_from": customer_info.symptom_from ,
                 "symptom_part": customer_info.symptom_part ,
+                "symptom_part_from": customer_info.symptom_from ,
                 "symptom_ct": customer_info.symptom_ct,
-                "symptom_part_from": customer_info.symptom_part_from ,
+                "symptom_size": customer_info.symptom_ct,
+                "symptom_color": customer_info.symptom_ct,
+                "symptom_affect": customer_info.symptom_ct,
+                "symptom_first_time": customer_info.symptom_ct,
                 "problem": customer_info.problem ,
                 "first_effect": customer_info.first_effect ,
                 "second_effect": customer_info.second_effect ,

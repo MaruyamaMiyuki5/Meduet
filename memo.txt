@@ -16,3 +16,10 @@ next.js
   # my-app > N0 > Yes > Yes > Yes > Yes > No
 
   npm run dev
+
+
+
+npm run devが動かない場合
+  chmod +x /Users/sawayanagidaisuke/Downloads/meduet/meduet_frontend/node_modules/.bin/next
+  rm -rf node_modules
+  npm install

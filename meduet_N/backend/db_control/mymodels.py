@@ -8,13 +8,16 @@ class Base(DeclarativeBase):
 
 
 class Customers(Base):
-    __tablename__ = 'customers'
-    customer_id:Mapped[str] = mapped_column(primary_key=True)
+    __tablename__ = 'customers_1'
+    customer_id:Mapped[int] = mapped_column(primary_key=True)
     customer_name:Mapped[str] = mapped_column()
     age:Mapped[int] = mapped_column()
+    birth:Mapped[str] = mapped_column()
     gender:Mapped[str] = mapped_column()
     pregnant:Mapped[str] = mapped_column()
     allergy:Mapped[str] = mapped_column()
+    chronic:Mapped[str] = mapped_column()
+    medication:Mapped[str] = mapped_column()
     prefecture:Mapped[str] = mapped_column()
     height:Mapped[str] = mapped_column()
     weight:Mapped[str] = mapped_column()
@@ -32,13 +35,18 @@ class Customers2(Base):
     weight:Mapped[str] = mapped_column()
 
 class Customers3(Base):
-    __tablename__ = 'symptoms'
-    customer_id:Mapped[str] = mapped_column(primary_key=True)
+    __tablename__ = 'symptoms_1'
+    symptom_customer_id:Mapped[int] = mapped_column(primary_key=True)
+    symptom_id:Mapped[int] = mapped_column()
+    customer_id:Mapped[int] = mapped_column()
     symptom:Mapped[str] = mapped_column()
-    symptom_from:Mapped[str] = mapped_column()
     symptom_part:Mapped[str] = mapped_column()
-    symptom_ct:Mapped[int] = mapped_column()
     symptom_part_from:Mapped[str] = mapped_column()
+    symptom_ct:Mapped[int] = mapped_column()
+    symptom_size:Mapped[int] = mapped_column()
+    symptom_color:Mapped[int] = mapped_column()
+    symptom_affect:Mapped[int] = mapped_column()
+    symptom_first_time:Mapped[int] = mapped_column()
     problem:Mapped[str] = mapped_column()
     first_effect:Mapped[str] = mapped_column()
     second_effect:Mapped[str] = mapped_column()
