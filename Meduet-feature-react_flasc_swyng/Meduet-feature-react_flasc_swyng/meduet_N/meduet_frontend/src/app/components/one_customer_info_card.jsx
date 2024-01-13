@@ -1,5 +1,5 @@
 export default function OneCustomerInfoCard({ 
-  customer_id, customer_name, age, birth, gender, pregnant, allergy,chronic, medication, prefecture, height, weight
+  customer_id, customer_name, birth, gender, pregnant, allergy,chronic, medication, prefecture, symptom_part,symptom,symtom_part_from,symptom_ct,symptom_size,symptom_color,symptom_affected,symptom_firsttime,problem,first_effect,second_effect,drug_form,priority_effect_form,sulfur_smell
 }) {
     return (
       <>
@@ -14,14 +14,14 @@ export default function OneCustomerInfoCard({
                 <p>通院中の病気の有無: {chronic}</p>
                 <p>服用中の有無: {medication}</p>
                 <p>住居都道府県: {prefecture}</p>
-                <p>どこの部位: {symtom_part_from}</p>
-                <p>症状: {symtom}</p>
+                <p>どこの部位: {symptom_part}</p>
+                <p>症状: {symptom}</p>
                 <p>いつから: {symtom_part_from}</p>
-                <p>何個出来ているか（複数部位の場合最もひどい部位の状況）: {symtom_ct}</p>
-                <p>ふくれている大きさ: {symtom_size}</p>
+                <p>何個出来ているか（複数部位の場合最もひどい部位の状況）: {symptom_ct}</p>
+                <p>ふくれている大きさ: {symptom_size}</p>
                 <p>色と見た目（最も近い状況）: {symptom_color}</p>
-                <p>患部の症状: {symtom_affected}</p>
-                <p>症状が出た時期: {symtom_firsttime}</p>
+                <p>患部の症状: {symptom_affected}</p>
+                <p>症状が出た時期: {symptom_firsttime}</p>
                 <p>困っていること: {problem}</p>
                 <p>1番に期待する効果: {first_effect}</p>
                 <p>次に期待する効果: {second_effect}</p>

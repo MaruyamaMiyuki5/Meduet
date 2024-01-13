@@ -1,0 +1,168 @@
+ソースコード
+  https://github.com/gurishunin/udemy_flask_memo
+
+backend
+
+仮想環境作成
+  python3 -m venv .venv
+
+仮想環境のアクティベイト
+  .venv/bin/activate
+    エラーの場合 ⇨ bash: .venv/bin/activate: Permission denied
+      chmod +x .venv/bin/activate
+        ↑実行権限付与
+
+flaskのインストール
+ pip install flask
+
+flaskの起動
+  export FLASK_APP=app
+  export FLASK_ENV=development
+  flask run
+
+index.html
+  ! + tabで自動補完
+
+SQLite
+  sqlite3 --version
+  sqlite3 flaskmemo.db
+
+  # add colums
+    alter table customers add pregnant text null;
+
+  # confirm columns
+    pragma table_info('customers');
+
+  create table customers_1 (
+  customer_id integer ,
+  customer_name text not null,
+  age integer not null,
+  birth date not null,
+  gender text not null,
+  pregnant text not null,
+  allergy text not null,
+  chronic text not null,
+  medication text not null,
+  prefecture text not null,
+  height text,
+  weight text
+  );
+
+  create table symptoms_1 (
+  symptom_customer_id integer primary key, 
+  symptom_id integer not null,
+  customer_id text not null,
+  symptom text text not null,
+  symptom_part text not null,
+  symptom_part_from text not null,
+  symptom_ct text not null,
+  symptom_size text not null,
+  symptom_color text not null,
+  symptom_affect text not null,
+  symptom_first_time text not null,
+  problem text not null,
+  first_effect text not null,
+  second_effect text not null,
+  drug_form text not null,
+  priority_effect_form text not null,
+  sulfur_smell text  not null
+  );
+
+
+
+   #削除 
+   drop table symptoms;
+
+   #insert
+   insert into customers_1(
+    customer_id ,
+    customer_name ,
+    age,
+    birth,
+    gender ,
+    pregnant ,
+    allergy ,
+    chronic ,
+    medication ,
+    prefecture ,
+    height,
+    weight
+   )
+   values(
+    1,
+    '野村 大郎',
+    20,
+    '2004-01-01',
+    '男',
+    'なし',
+    'なし',
+    'なし',
+    'なし',
+    '東京都',
+    '170',
+    '60'
+    );
+
+   #insert
+   insert into symptoms_1(
+    symptom_customer_id, 
+    symptom_id,
+    customer_id,
+    symptom,
+    symptom_part,
+    symptom_part_from,
+    symptom_ct,
+    symptom_size,
+    symptom_color,
+    symptom_affect,
+    symptom_first_time,
+    problem,
+    first_effect,
+    second_effect,
+    drug_form,
+    priority_effect_form,
+    sulfur_smell 
+   )
+   values(
+    1000000001,
+    1,
+    1,
+    'ニキビ',
+    '顔',
+    '昨日',
+    '1個',
+    '膨れてない',
+    '全体に赤い',
+    'かゆい',
+    '小学生から',
+    '病院を探している',
+    '赤身を抑えたい',
+    '殺菌したい',
+    'クリーム',
+    '効果優先',
+    '気になる'
+    );
+
+   #update
+   update memo
+   set title = "update_test",
+   body="update_Test"
+   where id=2;
+
+   #delete
+   delete from memo where id=2;
+
+   #トランザクション
+    BEGIN;
+    DELETE from memo;  #間違えた
+    ROLLBACK;  #前処理に戻る
+    BEGIN;
+    DELETE from memo where id=2;
+    COMMIT; # 処理確定
+
+    # 終了
+    .quit
+
+Login
+ pip install flask-Login
+ 

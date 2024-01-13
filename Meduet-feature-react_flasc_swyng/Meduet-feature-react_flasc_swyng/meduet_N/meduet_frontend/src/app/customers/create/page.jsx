@@ -60,23 +60,30 @@ export default function CreatePage() {
                                 <option>ある</option>
                                 <option>ない</option></select></p> 
                         
-                            <p>どこの部位（複数選択可）：<div class="form-control">
-                                <label class="label cursor-pointer">
-                                    <span class="label-text">顔</span> 
-                                    <input type="checkbox" checked="" class="checkbox" />
-                                    <span class="label-text">背中</span> 
-                                    <input type="checkbox" checked="" class="checkbox" />
-                                    <span class="label-text">デコルテ</span> 
-                                    <input type="checkbox" checked="" class="checkbox" />
-                                    <span class="label-text">その他</span> 
-                                    <input type="checkbox" checked="" class="checkbox" />
-                                </label>
+                            <p>どこの部位（複数選択可）：
+                                <div class="form-control" name="symptom_part">
+                                    <label class="label">
+                                        <input type="checkbox" name="face[]" value="顔" />
+                                        <span class="label-text">顔</span> 
+                                    </label>
+                                    <label class="label">
+                                        <input type="checkbox" name="back[]" value="背中" />
+                                        <span class="label-text">背中</span> 
+                                    </label>
+                                    <label class="label">
+                                        <input type="checkbox" name="decorte[]" value="デコルテ" />
+                                        <span class="label-text">デコルテ</span> 
+                                    </label>
+                                    <label class="label">
+                                        <input type="checkbox" name="others[]" value="その他" />
+                                        <span class="label-text">その他</span> 
+                                    </label>                                    
                                 </div></p>     
 
-                            <p>症状：<select class="select select-bordered w-full max-w-xs" name="symtom_part_from">
+                            <p>症状：<select class="select select-bordered w-full max-w-xs" name="symptom">
                                 <option>ニキビ</option></select></p> 
                             
-                            <p>いつから：<select class="select select-bordered w-full max-w-xs" name="symtom_part_from">
+                            <p>いつから：<select class="select select-bordered w-full max-w-xs" name="symptom_part_from">
                                 <option disabled selected>こちらから選択してください</option>
                                 <option>昨日</option>
                                 <option>数日前</option>
@@ -85,7 +92,7 @@ export default function CreatePage() {
                                 <option>一ヶ月前</option>
                                 <option>数ヶ月前</option>
                                 <option>それ以上前</option></select></p>                         
-                            <p>何個出来ているか（複数部位の場合最もひどい部位の状況）：<select class="select select-bordered w-full max-w-xs" name="symtom_ct">
+                            <p>何個出来ているか（複数部位の場合最もひどい部位の状況）：<select class="select select-bordered w-full max-w-xs" name="symptom_ct">
                                 <option disabled selected>こちらから選択してください</option>
                                 <option>1個</option>
                                 <option>2・3個</option>
@@ -104,12 +111,12 @@ export default function CreatePage() {
                                 <option>中心が白～黄色</option>
                                 <option>ただれている</option>
                                 <option>その他</option></select></p> 
-                            <p>患部の症状：<select class="select select-bordered w-full max-w-xs" name="symtom_affected">
+                            <p>患部の症状：<select class="select select-bordered w-full max-w-xs" name="symptom_affected">
                                 <option disabled selected>こちらから選択してください</option>
                                 <option>かゆい</option>
                                 <option>痛い</option>
                                 <option>その他</option></select></p> 
-                            <p>症状が出た時期：<select class="select select-bordered w-full max-w-xs" name="symtom_firsttime">
+                            <p>症状が出た時期：<select class="select select-bordered w-full max-w-xs" name="symptom_firsttime">
                                 <option disabled selected>こちらから選択してください</option>
                                 <option>小学生から</option>
                                 <option>中学生から</option>
