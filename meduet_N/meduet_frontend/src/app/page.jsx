@@ -21,7 +21,8 @@ export default function Home() {
           <h3 className="cursor-pointer hover:bg-gray-50 border-2 rounded p-4">
             <p>診断を始める</p>
             </h3>
-        </Link>
+      </Link>
       </div>
+
   );
 }

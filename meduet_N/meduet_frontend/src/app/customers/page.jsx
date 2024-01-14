@@ -17,13 +17,7 @@ export default function Page() {
 
   return (
     <>
-      <div className="p-4">
-        <Link href="/customers/create" className="mt-4 pt-4" prefetch={false}>
-          <button className="btn btn-neutral w-full border-0 bg-blue-200 text-black hover:text-white">Create</button>
-        </Link>
-      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-
         {customerInfos.map((customerInfo, index) => (
           <div key={index} className="card bordered bg-white border-blue-200 border-2 flex flex-row max-w-sm m-4">
             <OneCustomerInfoCard {...customerInfo} />
@@ -40,6 +34,11 @@ export default function Page() {
             </div>
           </div>
         ))}
+      </div>
+      <div className="p-4 flex justify-center">
+        <Link href="/customers/create" className="mt-4 pt-4" prefetch={false}>
+          <button className="btn btn-neutral w-40 border-0 bg-blue-800 text-white hover:text-white ">はじめる</button>
+        </Link>
       </div>
     </>
   );

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
@@ -16,8 +17,9 @@ export default function RootLayout({ children }) {
           {children}
         </div>
 
-        <img src="/Turkey.jpeg" alt="ロゴ" style={{ position: 'absolute', top: '10px', left: '10px' }} /> 
-        <img src="/Turkey.jpeg" alt="中央の画像" style={{ display: 'block', margin: 'auto' }} />
+        <img src="/Turkey.jpg" alt="ロゴ" style={{ position: 'absolute', top: '10px', left: '10px' }} /> 
+        <img src="/Turkey.jpg" alt="中央の画像" style={{ display: 'block', margin: 'auto' }} />
+
       </body>
     </html>
   );
