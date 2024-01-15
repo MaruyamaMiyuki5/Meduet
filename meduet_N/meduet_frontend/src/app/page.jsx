@@ -35,7 +35,7 @@ export default function Home() {
           </p>
         </div>
         <div className='px-20'>
-          <Link href="/customers" >
+          <Link href="/customers/create" >
               <h3 className="cursor-pointer hover:bg-blue-400 hover:text-black border-2 rounded-3xl p-5 bg-blue-700 text-white text-center m-10" >
                 診断を始める
                 </h3>

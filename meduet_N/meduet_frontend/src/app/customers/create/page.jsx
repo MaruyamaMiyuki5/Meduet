@@ -1,8 +1,13 @@
 "use client"
 import { useRef } from 'react';
 import { useRouter } from 'next/navigation';
-
 import createCustomer from './createCustomer';
+import Image from "next/image";
+import localImage1 from "../../logo.png";
+import localImage2 from "../../main_viz.png";
+import Link from 'next/link';
+
+
 
 export default function CreatePage() {
     const formRef = useRef();
@@ -15,21 +20,24 @@ export default function CreatePage() {
         router.push(`./create/confirm?customer_id=${formData.get("customer_id")}`);
     };
 
-    const items1 = [
-        {id:1, item:"あり"},
-        {id:1, item:"なし"},
-    ]
 
     return (
         <>
-            <div className="card bordered bg-white border-blue-200 border-2 max-w-md m-4">
-                <div className="m-4 card bordered bg-blue-200 duration-200 hover:border-r-red">
+            <div style={{ display: 'flex' }}>
+                <div style={{ flex: 1 }}>
+                    <Image src={localImage1} alt="LocalImage1" width={100} />
+                </div>
+                <div style={{ flex: 3}}>
+                    <Image src={localImage2} alt="LocalImage2" width={800} />
+                </div>
+            </div>
+
+            <div className="card bg-white  max-w-xl m-4 px-20">
+                <div className="m-4 card  duration-200 hover:border-r-red">
                     <form ref={formRef} onSubmit={handleSubmit}>
                         <div className="card-body">
-                            <h2 className="card-title">
-                                <p><input type="text" name="customer_name" placeholder="桃太郎" className="input input-bordered" /></p>
-                            </h2>
-                            <p>customer ID:<input type="text" name="customer_id" placeholder="C030" className="input input-bordered" /></p>
+                                <p>ニックネーム:<input type="text" name="customer_name" placeholder="桃太郎" className="input input-bordered" /></p>
+                            {/* <p>customer ID:<input type="text" name="customer_id" placeholder="C030" className="input input-bordered" /></p> */}
                             <p>生年月日:<input type="text" name="birth" placeholder="1996/1/1" className="input input-bordered" /></p>
                             <p>性別：<select class="select select-bordered w-full max-w-xs">
                                 <option disabled selected>こちらから選択してください</option>
@@ -164,13 +172,15 @@ export default function CreatePage() {
 
 
                         </div>
-                        <div className="flex justify-center">
-                            <button type="submit" className="btn btn-primary m-4 text-2xl">
-                                作成
-                            </button>
-                        </div>
                     </form>
                 </div>
+            </div>
+            <div className="flex justify-center">
+                <Link href='/customers/test'>
+                    <button type="submit" className="cursor-pointer hover:bg-blue-400 hover:text-black border-2 rounded-3xl p-5 bg-blue-700 text-white text-center m-5">
+                        おくすり提案
+                    </button>
+                </Link>
             </div>
         </>
     )
