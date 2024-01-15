@@ -12,12 +12,12 @@ export default function Home() {
       <div style={{ flex: 1 }}>
         <Image src={localImage1} alt="LocalImage1" width={100} />
       </div>
-      <div style={{ flex: 5}}>
-        <Image src={localImage2} alt="LocalImage2" width={1000} />
+      <div style={{ flex: 3}}>
+        <Image src={localImage2} alt="LocalImage2" width={800} />
       </div>
     </div>
      <div style={{ textAlign: 'left', marginTop: '20px' ,padding:'0 300px'}}>
-        <h2 className='pb-5 text-2xl'>はじめに</h2>
+        <h2 className='pb-5 text-2xl mt-10'>はじめに</h2>
         <p className='px-5'>
           Meduet は気軽に症状や悩みを相談できるあなたの薬剤師です。<br />
           一般用医薬品（OTC医薬品、ドラッグストアで買える薬）を購入したいとき、薬剤師が症状とあなたの要望を聞いて、一番最適なおくすりを提案します。
