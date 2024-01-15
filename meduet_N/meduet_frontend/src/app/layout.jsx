@@ -15,9 +15,6 @@ export default function RootLayout({ children }) {
         <div>
           {children}
         </div>
-
-        <img src="/Turkey.jpeg" alt="ロゴ" style={{ position: 'absolute', top: '10px', left: '10px' }} /> 
-        <img src="/Turkey.jpeg" alt="中央の画像" style={{ display: 'block', margin: 'auto' }} />
       </body>
     </html>
   );
